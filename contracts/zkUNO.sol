@@ -5,6 +5,15 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBase.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
+/**
+ * Constructor inherits VRFConsumerBase
+ *
+ * Network: Sepolia
+ * Chainlink VRF Coordinator address: 0x271682DEB8C4E0901D1a1550aD2e64D568E69909
+ * LINK token address: 0x779877A7B0D9E8603169DdbD7836e478b4624789
+ * Key Hash: 0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c
+ */
+
 contract ZKUno is Ownable, ReentrancyGuard, VRFConsumerBase {
     bytes32 internal keyHash;
     uint256 internal fee;
