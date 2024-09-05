@@ -124,6 +124,7 @@ contract ZKUno is Ownable, ReentrancyGuard, VRFConsumerBase {
         bytes32 requestId,
         uint256 randomness
     ) internal override {
+        requestId;
         uint256 gameId = gameCounter;
         games[gameId].currentPlayerIndex = uint8(
             randomness % games[gameId].players.length
